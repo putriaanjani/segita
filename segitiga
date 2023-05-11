@@ -1,0 +1,30 @@
+function segitiga2(panjang) {
+    let hasil = '';
+    let pengali = 2;
+    if(panjang%pengali !== 0){
+    for (let i = 0; i < panjang; i++) {
+        for (let j = panjang; j > i; j--) {
+            hasil += '* ';
+        }
+        hasil += '\n';
+    }
+    return hasil;
+    }
+    else if(panjang%pengali === 0){
+        for (let i = 0; i < panjang; i++) {
+        for (let j = 0; j <= i; j++) {
+            hasil += '* ';
+        }
+        hasil += '\n';
+    }
+    return hasil;
+    }
+}
+console.log(segitiga2(4));
+console.log(segitiga2(19));
+
+const inifungsi = (a,b) => {
+    console.log(a%b);
+    
+}
+inifungsi (5,2);
